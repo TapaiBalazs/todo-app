@@ -56,11 +56,13 @@ export class TodoListComponent {
     this.todos$
       .pipe(
         take(1),
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         filter((_) => previousIndex > 0),
         this.mapReorder(previousIndex, currentIndex),
         tap(this.updateTodos.bind(this)),
         observeOn(asyncScheduler)
       )
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       .subscribe((_) => {
         const listElement: CdkDrag = this.listElements?.find(
           (item, index: number) => index === currentIndex

@@ -1,8 +1,16 @@
 <h2 class="todo-list-header">TODO items</h2>
 <ul class="todos" cdkDropList (cdkDropListDropped)="drop($event)">
   <li
+    *ngIf="(todos$ | async).length === 0"
+    data-test-id="empty-list"
+    class="todo"
+  >
+    No todo items available.
+  </li>
+  <li
     class="todo"
     *ngFor="let todoItem of todos$ | async; let i = index; trackBy: trackBy"
+    [attr.data-test-id]="todoItem.task"
     (keydown.arrowDown)="moveDown({ previousIndex: i, currentIndex: i + 1 })"
     (keydown.arrowUp)="moveUp({ previousIndex: i, currentIndex: i - 1 })"
     cdkDrag
@@ -10,12 +18,17 @@
     <label class="label" [class.completed]="todoItem.isCompleted">
       <input
         type="checkbox"
+        [attr.data-test-id]="todoItem.task + '_checkbox'"
         [checked]="todoItem.isCompleted"
         (change)="toggleCompleted(todoItem)"
       />
       {{ todoItem.task }}
     </label>
-    <button class="delete" (click)="delete(todoItem)">
+    <button
+      class="delete"
+      [attr.data-test-id]="todoItem.task + '_delete'"
+      (click)="delete(todoItem)"
+    >
       <span class="screen-reader-text"> Delete: {{ todoItem.task }} </span>
       X
     </button>

@@ -1,5 +1,13 @@
-import { Given } from 'cypress-cucumber-preprocessor/steps';
+import { Before, Given, When } from 'cypress-cucumber-preprocessor/steps';
 
-Given('The application is opened', () => {
+Before(() => {
+  window.localStorage.clear();
+});
+
+Given('the application is opened', () => {
   cy.visit('/');
+});
+
+When('no todo items were saved previously', () => {
+  window.localStorage.setItem('todos', null);
 });

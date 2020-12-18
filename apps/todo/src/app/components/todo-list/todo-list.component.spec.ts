@@ -12,7 +12,7 @@ describe(`TodoListComponent`, () => {
   let component: TodoListComponent;
 
   beforeEach(() => {
-    component = new TodoListComponent(MOCK_TODOS_SERVICE as any);
+    component = new TodoListComponent(MOCK_TODOS_SERVICE as never);
   });
 
   afterEach(() => {
@@ -68,7 +68,7 @@ describe(`TodoListComponent`, () => {
   it(
     `'drop' method should move the item towards the end of the array`,
     waitForAsync(() => {
-      component.drop({ previousIndex: 0, currentIndex: 2 } as any);
+      component.drop({ previousIndex: 0, currentIndex: 2 } as never);
 
       expect(MOCK_TODOS_SERVICE.updateTodos).toHaveBeenCalledTimes(1);
       expect(MOCK_TODOS_SERVICE.updateTodos).toHaveBeenCalledWith([

@@ -3,19 +3,26 @@
     Add new todo item: *
     <input
       [class.input-error]="form.dirty && form.get('task').hasError('required')"
+      data-test-id="Add new todo item"
       aria-describedby="error"
       type="text"
       formControlName="task"
     />
     <div
       *ngIf="form.dirty && form.get('task').hasError('required')"
+      data-test-id="add input error"
       id="error"
       class="error"
     >
       Error: Task input is required
     </div>
   </label>
-  <button class="call-to-action" [disabled]="!form.valid" (click)="addTodo()">
+  <button
+    class="call-to-action"
+    data-test-id="Add button"
+    [disabled]="!form.valid"
+    (click)="addTodo()"
+  >
     Add
   </button>
 </form>

@@ -10,13 +10,17 @@ body {
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
+*:focus {
+  outline: 2px solid #00b0b9;
+}
+
 .call-to-action {
   /* Color of the 'Sign up now' button from www.crosskey.io*/
   background-color: #00b0b9;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   border-radius: 0.3rem;
 }

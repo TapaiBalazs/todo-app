@@ -19,6 +19,7 @@
 .header {
   padding: 0 1.5rem;
   background-color: #00b0b9;
+  color: white;
   grid-area: top;
   position: fixed;
   width: 100%;
@@ -29,18 +30,4 @@
   display: flex;
   flex: 1 1 auto;
   flex-flow: column nowrap;
-  /*grid-template-columns: auto 30vw auto;*/
-  /*grid-template-rows: 1fr 2fr 2fr;*/
-  /*grid-template-areas:*/
-  /*  'left add left'*/
-  /*  'left list right'*/
-  /*  'left list left';*/
-}
-
-.add-todo {
-  /*grid-area: add;*/
-}
-
-.todo-list {
-  /*grid-area: list;*/
 }

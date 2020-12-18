@@ -1,20 +1,20 @@
-<form [formGroup]="form">
-  <label>
-    Task: *
+<form class="add-todo-form" [formGroup]="form">
+  <label class="input-container">
+    Add new todo item: *
     <input
       [class.input-error]="form.dirty && form.get('task').hasError('required')"
       aria-describedby="error"
       type="text"
       formControlName="task"
     />
+    <div
+      *ngIf="form.dirty && form.get('task').hasError('required')"
+      id="error"
+      class="error"
+    >
+      Error: Task input is required
+    </div>
   </label>
-  <div
-    *ngIf="form.dirty && form.get('task').hasError('required')"
-    id="error"
-    class="error"
-  >
-    Error: Task input is required
-  </div>
   <button class="call-to-action" [disabled]="!form.valid" (click)="addTodo()">
     Add
   </button>

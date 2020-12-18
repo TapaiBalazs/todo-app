@@ -37,15 +37,16 @@ export class TodosService {
     this.todosSub.next(todos);
   }
 
-  completeTodo(id: number): void {
+  toggleCompleted(id: number): void {
     const todos = [...this.todosSub.getValue()];
     const todoIndex = todos.findIndex(
       (todoItem: TodoItem) => todoItem.id === id
     );
     todos[todoIndex] = {
       ...todos[todoIndex],
-      isCompleted: true,
+      isCompleted: !todos[todoIndex].isCompleted,
     };
+    this.todosSub.next(todos);
   }
 
   private cacheTodos(todos: TodoItem[]): void {

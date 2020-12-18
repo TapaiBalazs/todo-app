@@ -52,12 +52,12 @@ describe('TodosService', () => {
   );
 
   it(
-    `'completeTodo' method should keep the length of the todoItems, but update the target todoItem`,
+    `'toggleCompleted' method should keep the length of the todoItems, but update the target todoItem`,
     waitForAsync(() => {
       service.todos$
         .pipe(
           skip(2), // skip default value and the added value
-          take(1) // take the deleted value
+          take(1) // take the updated value
         )
         .subscribe((result) => {
           expect(result.length).toEqual(1);
@@ -68,7 +68,29 @@ describe('TodosService', () => {
         });
 
       service.addTodo({ id: 1, task: 'Test', isCompleted: false });
-      service.completeTodo(1);
+      service.toggleCompleted(1);
+    })
+  );
+
+  it(
+    `'toggleCompleted' method should keep the length of the todoItems, but update the target todoItem as a toggle`,
+    waitForAsync(() => {
+      service.todos$
+        .pipe(
+          skip(3), // skip default value, the added value and the first toggle
+          take(1) // take the updated value
+        )
+        .subscribe((result) => {
+          expect(result.length).toEqual(1);
+          const [todo] = result;
+          expect(todo.id).toEqual(1);
+          expect(todo.task).toEqual('Test');
+          expect(todo.isCompleted).toBe(false);
+        });
+
+      service.addTodo({ id: 1, task: 'Test', isCompleted: false });
+      service.toggleCompleted(1);
+      service.toggleCompleted(1);
     })
   );
 });

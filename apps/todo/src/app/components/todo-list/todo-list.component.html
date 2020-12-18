@@ -1,0 +1,14 @@
+<h2>TODO items</h2>
+<ul>
+  <li class="todo" *ngFor="let todoItem of todos$ | async">
+    <label class="label" [class.completed]="todoItem.isCompleted">
+      <input
+        type="checkbox"
+        [checked]="todoItem.isCompleted"
+        (change)="toggleCompleted(todoItem)"
+      />
+      {{ todoItem.task }}
+    </label>
+    <button class="delete" (click)="delete(todoItem)">X</button>
+  </li>
+</ul>

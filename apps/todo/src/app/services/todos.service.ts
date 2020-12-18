@@ -22,6 +22,10 @@ export class TodosService {
     .asObservable()
     .pipe(shareReplay(1), tap(this.cacheTodos));
 
+  updateTodos(todos: TodoItem[]): void {
+    this.todosSub.next(todos);
+  }
+
   addTodo(todo: TodoItem): void {
     const todos = [...this.todosSub.getValue()];
     todos.push(todo);

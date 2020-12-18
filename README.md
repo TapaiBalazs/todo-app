@@ -20,15 +20,14 @@ Be creative, but should have at least 1 color(that is not defined as white or bl
 
 - [x] Color used `#00b0b9`. (The Sign up button)
 
-
 ### Extras/Nice to have? (can pick 1, 2 or none)
 
-- Ex. Drag and drop list items order
+- [x] Ex. Drag and drop list items order
 - [x] Ex. Locally store list item in browser
 
 ### Project should include
 
-- HTML 
+- HTML
 - CSS
 - JS (any flavor of the month framework or vanilla/jQuery)
 
@@ -41,7 +40,8 @@ Be creative, but should have at least 1 color(that is not defined as white or bl
 ## Developer notes
 
 - As a starter, I used [Nx](https://nx.dev), because it gives an almost-zero-config setup for testing on unit and e2e level with cypress.
-
+- I used the @angular/cdk for drag and drop support
+- In order to comply with WCAG guidelines, I added keyboard support for reordering as well.
 
 ---
 

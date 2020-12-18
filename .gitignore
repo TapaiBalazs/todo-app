@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/cyreport
 
 # dependencies
 /node_modules

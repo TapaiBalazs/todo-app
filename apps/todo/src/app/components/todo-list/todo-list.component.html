@@ -9,6 +9,9 @@
       />
       {{ todoItem.task }}
     </label>
-    <button class="delete" (click)="delete(todoItem)">X</button>
+    <button class="delete" (click)="delete(todoItem)">
+      <span class="screen-reader-text"> Delete: {{ todoItem.task }} </span>
+      X
+    </button>
   </li>
 </ul>

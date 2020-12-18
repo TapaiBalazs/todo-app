@@ -8,20 +8,23 @@ This is a repository for a coding challenge.
 
 A User should
 
-- be able to add a new TODO item to a list
+- [x] be able to add a new TODO item to a list
 
-- be able to delete any item from a list
+- [x] be able to delete any item from a list
 
-- see the list of items they have added
+- [x] see the list of items they have added
 
 ## Look and feel?
 
 Be creative, but should have at least 1 color(that is not defined as white or black) that can be found on the www.crosskey.io website
 
+- [x] Color used `#00b0b9`. (The Sign up button)
+
+
 ### Extras/Nice to have? (can pick 1, 2 or none)
 
 - Ex. Drag and drop list items order
-- Ex. Locally store list item in browser
+- [x] Ex. Locally store list item in browser
 
 ### Project should include
 

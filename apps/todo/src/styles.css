@@ -4,4 +4,27 @@
   /* Color of the 'Sign up now' button from www.crosskey.io*/
   background-color: #00b0b9;
   color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 0.3rem;
+}
+
+button[disabled].call-to-action {
+  background-color: silver;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
 }

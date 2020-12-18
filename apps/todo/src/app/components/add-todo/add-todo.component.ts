@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TodosService } from '../../services/todos.service';
 
@@ -10,6 +10,7 @@ function generateUniqueId(): number {
   selector: 'cbs-todo-add-todo',
   templateUrl: './add-todo.component.html',
   styleUrls: ['./add-todo.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AddTodoComponent {
   form: FormGroup = this.fb.group({

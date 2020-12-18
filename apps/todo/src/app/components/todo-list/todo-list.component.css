@@ -7,10 +7,9 @@
   cursor: pointer;
   user-select: none;
   line-height: 2em;
-  vertical-align: center;
 }
 
-.completed {
+.label.completed {
   text-decoration-style: solid;
   text-decoration: line-through;
   color: #00b0b9;

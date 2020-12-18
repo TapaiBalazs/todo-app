@@ -1,6 +1,6 @@
 <h2>TODO items</h2>
 <ul>
-  <li class="todo" *ngFor="let todoItem of todos$ | async">
+  <li class="todo" *ngFor="let todoItem of todos$ | async; trackBy: trackBy">
     <label class="label" [class.completed]="todoItem.isCompleted">
       <input
         type="checkbox"

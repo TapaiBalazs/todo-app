@@ -27,9 +27,9 @@ Be creative, but should have at least 1 color(that is not defined as white or bl
 
 ### Project should include
 
-- HTML
-- CSS
-- JS (any flavor of the month framework or vanilla/jQuery)
+- [x] HTML
+- [x] CSS
+- [x] JS (any flavor of the month framework or vanilla/jQuery)
 
 ### Project should be
 
@@ -39,9 +39,19 @@ Be creative, but should have at least 1 color(that is not defined as white or bl
 
 ## Developer notes
 
+Technologies used:
+
+Framework: Angular, AngularCDK
+Unit test framework: Jest
+e2d testing framework: Cypress
+
 - As a starter, I used [Nx](https://nx.dev), because it gives an almost-zero-config setup for testing on unit and e2e level with cypress.
+- You can run the unit tests via `npm run test`
 - I used the @angular/cdk for drag and drop support
 - In order to comply with WCAG guidelines, I added keyboard support for reordering as well.
+- I added cypress tests to test the functionality, you can run them with `npm run e2e` or if you'd like to check the cypress debugger, run `npm run e2e:watch`
+- I use `Gherkin` for my cypress tests, although it does not support tagging properly, I do not believe it is an issue for debugging in the test runner.
+- I have noted, that the `drag` cypress command implementation is not my code, I have found it on stackoverflow.
 
 ---
 

@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+.call-to-action {
+  /* Color of the 'Sign up now' button from www.crosskey.io*/
+  background-color: #00b0b9;
+  color: white;
+}

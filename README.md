@@ -1,4 +1,46 @@
-# CbsTodo
+# TODO app
+
+This is a repository for a coding challenge.
+
+---
+
+## Criteria/Minimum viable product:
+
+A User should
+
+- be able to add a new TODO item to a list
+
+- be able to delete any item from a list
+
+- see the list of items they have added
+
+## Look and feel?
+
+Be creative, but should have at least 1 color(that is not defined as white or black) that can be found on the www.crosskey.io website
+
+### Extras/Nice to have? (can pick 1, 2 or none)
+
+- Ex. Drag and drop list items order
+- Ex. Locally store list item in browser
+
+### Project should include
+
+- HTML 
+- CSS
+- JS (any flavor of the month framework or vanilla/jQuery)
+
+### Project should be
+
+- Uploaded to a git repo
+
+---
+
+## Developer notes
+
+- As a starter, I used [Nx](https://nx.dev), because it gives an almost-zero-config setup for testing on unit and e2e level with cypress.
+
+
+---
 
 This project was generated using [Nx](https://nx.dev).
 

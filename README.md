@@ -33,7 +33,7 @@ Be creative, but should have at least 1 color(that is not defined as white or bl
 
 ### Project should be
 
-- Uploaded to a git repo
+- [x] Uploaded to a git repo
 
 ---
 
